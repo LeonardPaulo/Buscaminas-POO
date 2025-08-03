@@ -1,6 +1,6 @@
 package com.buscaminas.main;
 
-import com.buscaminas.controlador.ControladorJuego;
+import com.buscaminas.controladores.ControladorJuego;
 import com.buscaminas.excepciones.SalidaAnticipadaException;
 import com.buscaminas.vista.VistaConsola;
 
