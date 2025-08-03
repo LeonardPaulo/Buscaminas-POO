@@ -1,4 +1,4 @@
-package com.buscaminas.controlador;
+package com.buscaminas.controladores;
 
 import com.buscaminas.modelo.Jugador;
 import com.buscaminas.modelo.Tablero;
