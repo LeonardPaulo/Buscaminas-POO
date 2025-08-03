@@ -74,8 +74,8 @@ public class Tablero implements ITablero, Serializable {
         ICasilla casilla = casillas[fila][columna];
 
         if (casilla.estaDescubierta()) {
-            // En vez de lanzar excepción, simplemente ignorar la llamada
-            return;
+            System.out.println("La casilla ya ha sido descubierta."); // Imprime en consola
+            throw new CasillaYaDescubiertaException("La casilla ya ha sido descubierta.");
         }
 
         casilla.descubrir();
@@ -86,13 +86,18 @@ public class Tablero implements ITablero, Serializable {
                     if (i >= 0 && i < TAMAÑO && j >= 0 && j < TAMAÑO) {
                         ICasilla vecino = casillas[i][j];
                         if (!vecino.estaDescubierta() && !vecino.tieneMina()) {
-                            descubrir(i, j);
+                            try {
+                                descubrir(i, j);
+                            } catch (CasillaYaDescubiertaException e) {
+                                // Silenciar excepciones durante la expansión recursiva
+                            }
                         }
                     }
                 }
             }
         }
     }
+
 
     @Override
     public void marcar(int fila, int columna) {
