@@ -147,4 +147,35 @@ No usar con fines comerciales sin autorización.
 
 ---
 
+## Diagrama de Clases
+
+El proyecto incluye un diagrama de clases UML que representa la estructura principal y las relaciones entre las clases.
+
+### Ubicación
+
+El archivo del diagrama está ubicado en:
+
+docs/diagrama_clases.puml
+
+### Visualización en IntelliJ IDEA
+
+Para visualizar y editar el diagrama UML en IntelliJ IDEA, sigue estos pasos:
+
+1. **Instalar el plugin PlantUML**  
+   Ve a **File > Settings > Plugins**, busca e instala el plugin **PlantUML integration**.  
+   Reinicia IntelliJ si es necesario.
+
+2. **Abrir el archivo `.puml`**  
+   Navega hasta `docs/diagrama_clases.puml` y ábrelo.  
+   Verás la vista del código PlantUML.
+
+3. **Mostrar vista previa del diagrama**  
+   Si no aparece automáticamente, haz clic derecho dentro del archivo y selecciona **Show Diagram** o activa la vista previa del PlantUML.
+
+4. **(Opcional) Instalar Graphviz**  
+   Para mejorar el renderizado del diagrama, instala Graphviz desde https://graphviz.org/download/  
+   Luego configura su ruta en IntelliJ en **File > Settings > Other Settings > PlantUML**.
+
+---
+
 ¡Gracias por jugar y colaborar con este proyecto!
