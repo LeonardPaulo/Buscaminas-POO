@@ -65,14 +65,12 @@ public class TableroTest {
 
     @Test
     public void testTodasLasCasillasSegurasDescubiertas() {
-        // Descubrir todas las casillas sin mina manualmente
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 if (!tablero.obtenerCasilla(i, j).tieneMina()) {
                     try {
                         tablero.descubrir(i, j);
                     } catch (CasillaYaDescubiertaException e) {
-                        // Ignorar si ya está descubierta
                     } catch (Exception e) {
                         fail("Se lanzó una excepción inesperada: " + e.getMessage());
                     }

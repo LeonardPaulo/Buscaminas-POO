@@ -89,7 +89,6 @@ public class Tablero implements ITablero, Serializable {
                             try {
                                 descubrir(i, j);
                             } catch (CasillaYaDescubiertaException e) {
-                                // Silenciar excepciones durante la expansión recursiva
                             }
                         }
                     }
@@ -142,7 +141,6 @@ public class Tablero implements ITablero, Serializable {
                     try {
                         c.descubrir();
                     } catch (Exception e) {
-                        // Ignorar excepción si está marcada
                     }
                 }
             }

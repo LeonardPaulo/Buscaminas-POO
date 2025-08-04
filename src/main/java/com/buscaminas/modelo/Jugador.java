@@ -45,9 +45,6 @@ public class Jugador implements Serializable {
         this.puntaje += puntos;
     }
 
-    /**
-     * Reinicia el estado del jugador para una nueva partida.
-     */
     public void reiniciar() {
         this.puntaje = 0;
         this.perdio = false;

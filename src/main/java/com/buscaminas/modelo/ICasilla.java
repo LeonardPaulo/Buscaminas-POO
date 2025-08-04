@@ -10,5 +10,5 @@ public interface ICasilla extends Serializable {
     void marcar();
     int getMinasAdyacentes();
     void setMinasAdyacentes(int cantidad);
-    String mostrar(); // Método necesario para visualizar en consola
+    String mostrar();
 }

@@ -35,6 +35,6 @@ public abstract class Casilla extends ElementoJuego implements ICasilla {
 
     @Override
     public void marcar() {
-        this.marcada = !this.marcada;  // Alterna marcado/no marcado
+        this.marcada = !this.marcada;
     }
 }

@@ -24,7 +24,7 @@ public class ControladorJuego {
         vista.mostrarBienvenida();
 
         if (GestorArchivos.existePartidaGuardada() && vista.preguntarSiCargarPartida()) {
-            vista.mostrarCargando();  // ← animación al cargar
+            vista.mostrarCargando();
             try {
                 Object[] partida = GestorArchivos.cargarPartida();
                 tablero = (Tablero) partida[0];
@@ -46,7 +46,7 @@ public class ControladorJuego {
 
     public void cargarYContinuar() throws SalidaAnticipadaException {
         if (GestorArchivos.existePartidaGuardada()) {
-            vista.mostrarCargando();  // ← animación al cargar
+            vista.mostrarCargando();
             try {
                 Object[] partida = GestorArchivos.cargarPartida();
                 tablero = (Tablero) partida[0];
@@ -76,7 +76,7 @@ public class ControladorJuego {
                     finalizarVictoria();
                     jugando = vista.preguntarNuevoJuego();
                     if (jugando) {
-                        vista.mostrarCargando();  // ← animación al reiniciar
+                        vista.mostrarCargando();
                         nuevoTablero();
                     }
                 }
@@ -94,7 +94,7 @@ public class ControladorJuego {
 
                 jugando = vista.preguntarNuevoJuego();
                 if (jugando) {
-                    vista.mostrarCargando();  // ← animación al reiniciar
+                    vista.mostrarCargando();
                     nuevoTablero();
                 }
             }
@@ -126,7 +126,7 @@ public class ControladorJuego {
                 break;
 
             case "GUARDAR":
-                vista.mostrarCargando();  // ← animación al guardar
+                vista.mostrarCargando();
                 try {
                     GestorArchivos.guardarPartida(tablero, jugador);
                     vista.mostrarMensaje("Partida guardada exitosamente.");
@@ -136,7 +136,7 @@ public class ControladorJuego {
                 break;
 
             case "CARGAR":
-                vista.mostrarCargando();  // ← animación al cargar desde comando
+                vista.mostrarCargando();
                 try {
                     if (GestorArchivos.existePartidaGuardada()) {
                         Object[] partida = GestorArchivos.cargarPartida();

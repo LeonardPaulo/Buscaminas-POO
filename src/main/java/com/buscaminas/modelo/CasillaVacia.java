@@ -40,13 +40,13 @@ public class CasillaVacia implements ICasilla {
             throw new CasillaYaDescubiertaException();
         }
         this.descubierta = true;
-        this.marcada = false;  // Al descubrir, si estaba marcada se desmarca
+        this.marcada = false;
     }
 
     @Override
     public void marcar() {
         if (!descubierta) {
-            marcada = !marcada; // Alterna entre marcada y no marcada
+            marcada = !marcada;
         }
     }
 
@@ -63,14 +63,14 @@ public class CasillaVacia implements ICasilla {
     @Override
     public String mostrar() {
         if (marcada) {
-            return "M";  // Casilla marcada con bandera
+            return "M";
         }
         if (!descubierta) {
-            return "■";  // Casilla sin descubrir
+            return "■";
         }
         if (minasAdyacentes == 0) {
-            return "□";  // Casilla descubierta y vacía (sin minas cercanas)
+            return "□";
         }
-        return Integer.toString(minasAdyacentes);  // Número de minas adyacentes
+        return Integer.toString(minasAdyacentes);
     }
 }

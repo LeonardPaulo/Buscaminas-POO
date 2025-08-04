@@ -38,34 +38,33 @@ public class CasillaMina implements ICasilla {
             throw new CasillaYaDescubiertaException();
         }
         this.descubierta = true;
-        this.marcada = false;  // Al descubrir, se quita la marca si existía
+        this.marcada = false;
     }
 
     @Override
     public void marcar() {
         if (!descubierta) {
-            marcada = !marcada;  // Alterna marcada/no marcada
+            marcada = !marcada;
         }
     }
 
     @Override
     public int getMinasAdyacentes() {
-        return -1;  // No aplica para mina
+        return -1;
     }
 
     @Override
     public void setMinasAdyacentes(int cantidad) {
-        // No aplica para mina, método vacío
     }
 
     @Override
     public String mostrar() {
         if (marcada) {
-            return "M";  // Casilla marcada con bandera
+            return "M";
         }
         if (!descubierta) {
-            return "■";  // Casilla sin descubrir
+            return "■";
         }
-        return "X";  // Casilla descubierta que tiene mina
+        return "X";
     }
 }

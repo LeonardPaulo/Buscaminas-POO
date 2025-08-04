@@ -34,7 +34,7 @@ public class CasillaTest {
     public void testCasillaVaciaDescubrirYMarcar() throws Exception {
         casillaVacia.marcar();
         assertTrue(casillaVacia.estaMarcada());
-        assertEquals("M", casillaVacia.mostrar());  // Cambiado de "F" a "M"
+        assertEquals("M", casillaVacia.mostrar());
 
         casillaVacia.marcar();
         assertFalse(casillaVacia.estaMarcada());
@@ -42,7 +42,7 @@ public class CasillaTest {
 
         casillaVacia.descubrir();
         assertTrue(casillaVacia.estaDescubierta());
-        assertEquals("□", casillaVacia.mostrar());  // Cambiado de "V" a "□"
+        assertEquals("□", casillaVacia.mostrar());
 
         assertThrows(CasillaYaDescubiertaException.class, () -> {
             casillaVacia.descubrir();
@@ -67,7 +67,7 @@ public class CasillaTest {
 
         casillaMina.marcar();
         assertTrue(casillaMina.estaMarcada());
-        assertEquals("M", casillaMina.mostrar());  // Cambiado de "F" a "M"
+        assertEquals("M", casillaMina.mostrar());
 
         casillaMina.marcar();
         assertFalse(casillaMina.estaMarcada());

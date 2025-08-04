@@ -10,5 +10,4 @@ import org.junit.platform.suite.api.Suite;
         TableroTest.class
 })
 public class BuscaminasTestSuite {
-    // Esta clase queda vacía, solo sirve para agrupar tests
 }
